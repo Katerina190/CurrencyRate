@@ -17,7 +17,7 @@ final class NetworkService {
         request.httpMethod = "GET"
         
         URLSession.shared.dataTask(with: request) { responseData, response, error in
-//            print(responseData)
+            print(responseData)
             if let error = error {
                 print(error.localizedDescription)
             } else if let jsonData = responseData {
@@ -27,6 +27,7 @@ final class NetworkService {
 //                posts?.append(belarusianRuble)
                 
                 //let posts = try? JSONDecoder().decode([Model].self, from: jsonData)
+                
                 DispatchQueue.main.async {
                     completion(posts ?? [])
                 }

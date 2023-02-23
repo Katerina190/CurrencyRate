@@ -28,6 +28,8 @@ final class ExchangeVC: UIViewController {
         
         networkService.loadPosts { [weak self] models in
             self?.model = models.first
+            self!.toCurrency  = models.first
+            self!.fromCurrency = models.last
             self?.updateUI()
         }
         
@@ -69,8 +71,6 @@ final class ExchangeVC: UIViewController {
     private func convertMoney(amount: Double?) -> String {
         print("jgejrr\(fromCurrency)")
        print("ger\(toCurrency)")
-       
-        
         guard let fromCurrency = fromCurrency,
                 let toCurrency = toCurrency,
                 let amount = amount else {
@@ -78,6 +78,7 @@ final class ExchangeVC: UIViewController {
         }
         let d = ((Double(fromCurrency.Cur_Scale) * fromCurrency.Cur_OfficialRate) /  (Double(toCurrency.Cur_Scale) * toCurrency.Cur_OfficialRate)) * amount
         return String(d)
+        print(amount)
     }
     
     //MARK: - function for buttons
