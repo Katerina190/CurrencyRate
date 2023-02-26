@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "gradient-art-abstract-4k-ipad-pro.jpg",
+      "filename" : "currencyBlack.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "currencyBlackx2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "currencyBlackx3.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

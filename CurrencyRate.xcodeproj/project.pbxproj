@@ -17,6 +17,7 @@
 		C864DFB3298F192200C7F549 /* rates in Resources */ = {isa = PBXBuildFile; fileRef = C864DFB2298F192200C7F549 /* rates */; };
 		C864DFB9298F228B00C7F549 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C864DFB8298F228B00C7F549 /* TableViewCell.swift */; };
 		C864DFBE298F23D800C7F549 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C864DFBD298F23D800C7F549 /* NetworkService.swift */; };
+		C8745A0829A7BACA002B73EC /* unique.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8745A0729A7BACA002B73EC /* unique.storyboard */; };
 		C8951B8F2994772200248DE8 /* RateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8951B8E2994772200248DE8 /* RateCell.swift */; };
 		C8951B912994773100248DE8 /* RateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8951B902994773100248DE8 /* RateCell.xib */; };
 		C8951B9429986F6700248DE8 /* BanksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8951B9329986F6700248DE8 /* BanksModel.swift */; };
@@ -45,6 +46,7 @@
 		C864DFB2298F192200C7F549 /* rates */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = rates; path = ../../../../../Downloads/rates; sourceTree = "<group>"; };
 		C864DFB8298F228B00C7F549 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		C864DFBD298F23D800C7F549 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		C8745A0729A7BACA002B73EC /* unique.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = unique.storyboard; sourceTree = "<group>"; };
 		C8951B8E2994772200248DE8 /* RateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateCell.swift; sourceTree = "<group>"; };
 		C8951B902994773100248DE8 /* RateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RateCell.xib; sourceTree = "<group>"; };
 		C8951B9229986F4200248DE8 /* Empty.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Empty.md; sourceTree = "<group>"; };
@@ -94,7 +96,6 @@
 				C864DF97298F0F8700C7F549 /* AppDelegate.swift */,
 				C864DF99298F0F8700C7F549 /* SceneDelegate.swift */,
 				C864DF9D298F0F8700C7F549 /* Main.storyboard */,
-				C8A2300629931B6000A15558 /* LaunchScreenController.swift */,
 				C85CBD6C29908B87002338FE /* ExchangeVC.swift */,
 				C89FA4AD299053D100357C8B /* CoursesVC.swift */,
 				C8A2300F2994731800A15558 /* SettingsVC.swift */,
@@ -102,6 +103,8 @@
 				C864DFA0298F0F8900C7F549 /* Assets.xcassets */,
 				C864DFA2298F0F8900C7F549 /* LaunchScreen.storyboard */,
 				C864DFA5298F0F8900C7F549 /* Info.plist */,
+				C8745A1A29A98D1D002B73EC /* LaunchScreen */,
+				C8745A1929A98877002B73EC /* Xib */,
 				C8A2300A299470CA00A15558 /* Cells */,
 				C864DFBA298F235E00C7F549 /* NetworkService */,
 				C864DFB5298F226B00C7F549 /* TableViewCell */,
@@ -133,7 +136,6 @@
 		C864DFB5298F226B00C7F549 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				C864DFB8298F228B00C7F549 /* TableViewCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -146,15 +148,32 @@
 			path = NetworkService;
 			sourceTree = "<group>";
 		};
+		C8745A1929A98877002B73EC /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				C8951B902994773100248DE8 /* RateCell.xib */,
+				C8951B972999D43400248DE8 /* BankCell.xib */,
+				C8A2300829946FA300A15558 /* SettingCell.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		C8745A1A29A98D1D002B73EC /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				C8A2300629931B6000A15558 /* LaunchScreenController.swift */,
+				C8745A0729A7BACA002B73EC /* unique.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
 		C8A2300A299470CA00A15558 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				C8A2300829946FA300A15558 /* SettingCell.xib */,
-				C8951B902994773100248DE8 /* RateCell.xib */,
-				C8951B972999D43400248DE8 /* BankCell.xib */,
 				C8951B8E2994772200248DE8 /* RateCell.swift */,
 				C8A2300D299471F500A15558 /* SettingCell.swift */,
 				C8951B9B299BE4F300248DE8 /* BankCell.swift */,
+				C864DFB8298F228B00C7F549 /* TableViewCell.swift */,
 				C8951B9D299DD69400248DE8 /* DateForToday.swift */,
 			);
 			path = Cells;
@@ -221,6 +240,7 @@
 				C8951B982999D43400248DE8 /* BankCell.xib in Resources */,
 				C864DFA4298F0F8900C7F549 /* LaunchScreen.storyboard in Resources */,
 				C864DFA1298F0F8900C7F549 /* Assets.xcassets in Resources */,
+				C8745A0829A7BACA002B73EC /* unique.storyboard in Resources */,
 				C864DFB3298F192200C7F549 /* rates in Resources */,
 				C8951B912994773100248DE8 /* RateCell.xib in Resources */,
 				C8951BA029A5119200248DE8 /* ratesAllCurrencies in Resources */,
@@ -401,7 +421,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CurrencyRate/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = unique.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -429,7 +449,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CurrencyRate/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = unique.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

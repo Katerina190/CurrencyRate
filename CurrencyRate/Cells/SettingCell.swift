@@ -13,6 +13,7 @@ class SettingCell: UITableViewCell {
     @IBOutlet private weak var infoButton: UIButton!
     
     
+    
      func configure(with info: String) {
         infoLabel.text = info
     }

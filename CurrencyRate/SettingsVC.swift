@@ -24,7 +24,7 @@ final class SettingsVC: UIViewController {
 
 extension SettingsVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        3
+        10
     }
     
     
@@ -34,6 +34,7 @@ extension SettingsVC: UITableViewDataSource {
         let cell = tableViewSettings.dequeueReusableCell(withIdentifier: "SettingCell", for: indexPath) as! SettingCell
        // cell.configure(icon: UIImage(systemName: "bitcoinsign"), text: "american money", value: 2.6)
             cell.configure(with: "This is some test info")
+        cell.layer.cornerRadius = 10
         return cell
     }
 }

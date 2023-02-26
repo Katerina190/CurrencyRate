@@ -14,7 +14,7 @@ final class ExchangeVC: UIViewController {
     @IBOutlet private weak var actualDateLabel: UILabel!
     @IBOutlet private weak var buttonTo: UIButton!
     @IBOutlet private weak var buttonFrom: UIButton!
-    
+    @IBOutlet private weak var rightButtonDone: UIBarButtonItem!
     
     private var model: Model?
     private var networkService = NetworkService()
@@ -29,48 +29,37 @@ final class ExchangeVC: UIViewController {
         networkService.loadPosts { [weak self] models in
             self?.model = models.first
             self!.toCurrency  = models.first
-            self!.fromCurrency = models.last
-            self?.updateUI()
+            self!.fromCurrency = models[8]
+            self!.updateUI(with: models.last!)
         }
-        
+        resultFrom.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
         renewButtons()
     }
     
-   
-    
     //MARK: - function for dateLabel
     
-    private func updateUI() {
-        if let model = model {
-            let inputDateFormatter = DateFormatter()
-            inputDateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
-            
-            let outputDateFormatter = DateFormatter()
-            outputDateFormatter.dateFormat = "Курсы за: dd.MM.yyyy"
-            
-            if let date = inputDateFormatter.date(from: model.Date) {
-                let formattedDate = outputDateFormatter.string(from: date)
-                actualDateLabel.text = formattedDate
-            }
+    private func updateUI(with model: Model) {
+
+        let inputDateFormatter = DateFormatter()
+        inputDateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+
+        let outputDateFormatter = DateFormatter()
+        outputDateFormatter.dateFormat = "dd.MM.yyyy"
+
+        if let date = inputDateFormatter.date(from: model.Date) {
+            let formattedDate = outputDateFormatter.string(from: date)
+
+            actualDateLabel.text = "Курсы за \(formattedDate)"
         }
     }
     //MARK: - function for convert money
     
-//    private func convertMoney(amount: Double?) -> String {
-//        if amount == nil  {
-//            return ""
-//        }
-//
-//        let d = ((fromCurrency!.Cur_Scale_Double! * fromCurrency!.Cur_OfficialRate) /  (toCurrency!.Cur_Scale_Double! * toCurrency!.Cur_OfficialRate)) * amount!
-//        return String(d)
-//    }
-    
     private func convertMoney(amount: Double?) -> String {
-        print("jgejrr\(fromCurrency)")
-       print("ger\(toCurrency)")
+//        print("jgejrr\(fromCurrency?.Cur_Abbreviation)")
+//        print("ger\(toCurrency?.Cur_Abbreviation)")
         guard let fromCurrency = fromCurrency,
                 let toCurrency = toCurrency,
                 let amount = amount else {
@@ -78,7 +67,15 @@ final class ExchangeVC: UIViewController {
         }
         let d = ((Double(fromCurrency.Cur_Scale) * fromCurrency.Cur_OfficialRate) /  (Double(toCurrency.Cur_Scale) * toCurrency.Cur_OfficialRate)) * amount
         return String(d)
-        print(amount)
+
+    }
+    
+    @IBAction private func textFieldFromConvert() {
+            let amount = Double(resultFrom.text!)
+            if amount != nil {
+            resultTo.text = convertMoney(amount: amount)
+                print("succesfull")
+        }
     }
     
     //MARK: - function for buttons
@@ -88,16 +85,10 @@ final class ExchangeVC: UIViewController {
         buttonTo.setTitle(toCurrency?.Cur_Abbreviation, for: UIControl.State.normal)
     }
     
-
-    @IBAction private func textFieldFromConvert() {
-            let amount = Double(resultFrom.text!)
-            if amount != nil {
-            resultTo.text = convertMoney(amount: amount)
-                print("succesfull")
-        }
-        
+    @IBAction private func barButtonDone(_ sender: AnyObject) {
+        resultFrom.resignFirstResponder()
+        navigationItem.rightBarButtonItem = nil
     }
-    
     
     @IBAction private func textFieldToConvert() {
         
@@ -111,9 +102,13 @@ final class ExchangeVC: UIViewController {
         
     }
         
-        
-    }
+}
     
-
+extension ExchangeVC: UITextFieldDelegate {
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        navigationItem.rightBarButtonItem = rightButtonDone
+        return true
+    }
+}
 
 

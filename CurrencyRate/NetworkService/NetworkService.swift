@@ -17,14 +17,14 @@ final class NetworkService {
         request.httpMethod = "GET"
         
         URLSession.shared.dataTask(with: request) { responseData, response, error in
-            print(responseData)
+//            print(responseData)
             if let error = error {
                 print(error.localizedDescription)
             } else if let jsonData = responseData {
                 var posts = try? JSONDecoder().decode([Model].self, from: jsonData)
         //MARK: - new byn
-//                let belarusianRuble = Model(Cur_ID: 0, Date: "", Cur_Abbreviation: "BYN", Cur_Scale: 1, Cur_Name: "Белорусский рубль", Cur_OfficialRate: 1.0)
-//                posts?.append(belarusianRuble)
+                let belarusianRuble = Model(Cur_ID: 0, Date: "", Cur_Abbreviation: "BYN", Cur_Scale: 1, Cur_Name: "Белорусский рубль", Cur_OfficialRate: 1.0)
+                posts?.insert(belarusianRuble, at: 0)
                 
                 //let posts = try? JSONDecoder().decode([Model].self, from: jsonData)
                 

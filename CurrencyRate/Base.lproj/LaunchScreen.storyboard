@@ -14,28 +14,8 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient2" translatesAutoresizingMaskIntoConstraints="NO" id="gXS-oe-tiA">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="5Yg-nK-8my">
-                                <rect key="frame" x="132" y="373" width="150" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="8OE-tB-Zqs"/>
-                                    <constraint firstAttribute="width" constant="150" id="ivz-iD-ooD"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="gXS-oe-tiA" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="GcG-Kc-58v"/>
-                            <constraint firstItem="5Yg-nK-8my" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="SGH-cJ-Zcr"/>
-                            <constraint firstItem="gXS-oe-tiA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jt8-Ty-RJC"/>
-                            <constraint firstAttribute="bottom" secondItem="gXS-oe-tiA" secondAttribute="bottom" id="k0z-Mn-Xeh"/>
-                            <constraint firstItem="gXS-oe-tiA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="o5O-I9-guG"/>
-                            <constraint firstItem="5Yg-nK-8my" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="sMg-eO-fNF"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -43,8 +23,4 @@
             <point key="canvasLocation" x="52.173913043478265" y="374.33035714285711"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="gradient2" width="2732" height="2732"/>
-        <image name="logo" width="500" height="500"/>
-    </resources>
 </document>
