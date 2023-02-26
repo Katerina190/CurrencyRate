@@ -30,7 +30,7 @@ final class ExchangeVC: UIViewController {
             self?.model = models.first
             self!.toCurrency  = models.first
             self!.fromCurrency = models[8]
-            self!.updateUI(with: models.last!)
+            self!.updateUI()
         }
         resultFrom.delegate = self
     }
@@ -41,25 +41,27 @@ final class ExchangeVC: UIViewController {
     
     //MARK: - function for dateLabel
     
-    private func updateUI(with model: Model) {
-
-        let inputDateFormatter = DateFormatter()
-        inputDateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
-
-        let outputDateFormatter = DateFormatter()
-        outputDateFormatter.dateFormat = "dd.MM.yyyy"
-
-        if let date = inputDateFormatter.date(from: model.Date) {
-            let formattedDate = outputDateFormatter.string(from: date)
-
-            actualDateLabel.text = "Курсы за \(formattedDate)"
-        }
+    private func updateUI() {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.yyyy"
+        let formattedDate = dateFormatter.string(from: Date())
+        actualDateLabel.text = "Курсы за \(formattedDate)"
+        
+//        let inputDateFormatter = DateFormatter()
+//        inputDateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+//
+//        let outputDateFormatter = DateFormatter()
+//        outputDateFormatter.dateFormat = "dd.MM.yyyy"
+//
+//        if let date = inputDateFormatter.date(from: model.Date) {
+//            let formattedDate = outputDateFormatter.string(from: date)
+//
+//            actualDateLabel.text = "Курсы за \(formattedDate)"
+//        }
     }
     //MARK: - function for convert money
     
     private func convertMoney(amount: Double?) -> String {
-//        print("jgejrr\(fromCurrency?.Cur_Abbreviation)")
-//        print("ger\(toCurrency?.Cur_Abbreviation)")
         guard let fromCurrency = fromCurrency,
                 let toCurrency = toCurrency,
                 let amount = amount else {
@@ -89,11 +91,6 @@ final class ExchangeVC: UIViewController {
         resultFrom.resignFirstResponder()
         navigationItem.rightBarButtonItem = nil
     }
-    
-    @IBAction private func textFieldToConvert() {
-        
-    }
-    
     
     @IBAction private func buttonFromMoney(_ sendeer: AnyObject) {
         

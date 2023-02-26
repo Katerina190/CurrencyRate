@@ -18,16 +18,13 @@
 		C864DFB9298F228B00C7F549 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C864DFB8298F228B00C7F549 /* TableViewCell.swift */; };
 		C864DFBE298F23D800C7F549 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C864DFBD298F23D800C7F549 /* NetworkService.swift */; };
 		C8745A0829A7BACA002B73EC /* unique.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8745A0729A7BACA002B73EC /* unique.storyboard */; };
-		C8951B8F2994772200248DE8 /* RateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8951B8E2994772200248DE8 /* RateCell.swift */; };
-		C8951B912994773100248DE8 /* RateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8951B902994773100248DE8 /* RateCell.xib */; };
+		C8745A2A29AC102C002B73EC /* ListForChoiceCurrencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8745A2929AC102C002B73EC /* ListForChoiceCurrencies.swift */; };
 		C8951B9429986F6700248DE8 /* BanksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8951B9329986F6700248DE8 /* BanksModel.swift */; };
 		C8951B96299871C400248DE8 /* BanksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8951B95299871C400248DE8 /* BanksVC.swift */; };
 		C8951B982999D43400248DE8 /* BankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8951B972999D43400248DE8 /* BankCell.xib */; };
 		C8951B9C299BE4F300248DE8 /* BankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8951B9B299BE4F300248DE8 /* BankCell.swift */; };
-		C8951B9E299DD69400248DE8 /* DateForToday.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8951B9D299DD69400248DE8 /* DateForToday.swift */; };
 		C8951BA029A5119200248DE8 /* ratesAllCurrencies in Resources */ = {isa = PBXBuildFile; fileRef = C8951B9F29A5119200248DE8 /* ratesAllCurrencies */; };
 		C89FA4AE299053D100357C8B /* CoursesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89FA4AD299053D100357C8B /* CoursesVC.swift */; };
-		C8A2300729931B6000A15558 /* LaunchScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A2300629931B6000A15558 /* LaunchScreenController.swift */; };
 		C8A2300929946FA300A15558 /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8A2300829946FA300A15558 /* SettingCell.xib */; };
 		C8A2300E299471F500A15558 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A2300D299471F500A15558 /* SettingCell.swift */; };
 		C8A230102994731800A15558 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A2300F2994731800A15558 /* SettingsVC.swift */; };
@@ -47,17 +44,14 @@
 		C864DFB8298F228B00C7F549 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		C864DFBD298F23D800C7F549 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		C8745A0729A7BACA002B73EC /* unique.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = unique.storyboard; sourceTree = "<group>"; };
-		C8951B8E2994772200248DE8 /* RateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateCell.swift; sourceTree = "<group>"; };
-		C8951B902994773100248DE8 /* RateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RateCell.xib; sourceTree = "<group>"; };
+		C8745A2929AC102C002B73EC /* ListForChoiceCurrencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListForChoiceCurrencies.swift; sourceTree = "<group>"; };
 		C8951B9229986F4200248DE8 /* Empty.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Empty.md; sourceTree = "<group>"; };
 		C8951B9329986F6700248DE8 /* BanksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksModel.swift; sourceTree = "<group>"; };
 		C8951B95299871C400248DE8 /* BanksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksVC.swift; sourceTree = "<group>"; };
 		C8951B972999D43400248DE8 /* BankCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BankCell.xib; sourceTree = "<group>"; };
 		C8951B9B299BE4F300248DE8 /* BankCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCell.swift; sourceTree = "<group>"; };
-		C8951B9D299DD69400248DE8 /* DateForToday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateForToday.swift; sourceTree = "<group>"; };
 		C8951B9F29A5119200248DE8 /* ratesAllCurrencies */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ratesAllCurrencies; path = ../../../../../Downloads/ratesAllCurrencies; sourceTree = "<group>"; };
 		C89FA4AD299053D100357C8B /* CoursesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesVC.swift; sourceTree = "<group>"; };
-		C8A2300629931B6000A15558 /* LaunchScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenController.swift; sourceTree = "<group>"; };
 		C8A2300829946FA300A15558 /* SettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingCell.xib; sourceTree = "<group>"; };
 		C8A2300D299471F500A15558 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		C8A2300F2994731800A15558 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
@@ -96,19 +90,19 @@
 				C864DF97298F0F8700C7F549 /* AppDelegate.swift */,
 				C864DF99298F0F8700C7F549 /* SceneDelegate.swift */,
 				C864DF9D298F0F8700C7F549 /* Main.storyboard */,
-				C85CBD6C29908B87002338FE /* ExchangeVC.swift */,
 				C89FA4AD299053D100357C8B /* CoursesVC.swift */,
-				C8A2300F2994731800A15558 /* SettingsVC.swift */,
+				C85CBD6C29908B87002338FE /* ExchangeVC.swift */,
 				C8951B95299871C400248DE8 /* BanksVC.swift */,
+				C8A2300F2994731800A15558 /* SettingsVC.swift */,
 				C864DFA0298F0F8900C7F549 /* Assets.xcassets */,
 				C864DFA2298F0F8900C7F549 /* LaunchScreen.storyboard */,
 				C864DFA5298F0F8900C7F549 /* Info.plist */,
-				C8745A1A29A98D1D002B73EC /* LaunchScreen */,
+				C8745A2829AC1004002B73EC /* ChoiceForExchange */,
 				C8745A1929A98877002B73EC /* Xib */,
 				C8A2300A299470CA00A15558 /* Cells */,
 				C864DFBA298F235E00C7F549 /* NetworkService */,
-				C864DFB5298F226B00C7F549 /* TableViewCell */,
 				C864DFAF298F10A200C7F549 /* Model */,
+				C8745A1A29A98D1D002B73EC /* LaunchScreen */,
 				C864DFAB298F102A00C7F549 /* Data */,
 			);
 			path = CurrencyRate;
@@ -133,13 +127,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		C864DFB5298F226B00C7F549 /* TableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = TableViewCell;
-			sourceTree = "<group>";
-		};
 		C864DFBA298F235E00C7F549 /* NetworkService */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,7 +138,6 @@
 		C8745A1929A98877002B73EC /* Xib */ = {
 			isa = PBXGroup;
 			children = (
-				C8951B902994773100248DE8 /* RateCell.xib */,
 				C8951B972999D43400248DE8 /* BankCell.xib */,
 				C8A2300829946FA300A15558 /* SettingCell.xib */,
 			);
@@ -161,20 +147,25 @@
 		C8745A1A29A98D1D002B73EC /* LaunchScreen */ = {
 			isa = PBXGroup;
 			children = (
-				C8A2300629931B6000A15558 /* LaunchScreenController.swift */,
 				C8745A0729A7BACA002B73EC /* unique.storyboard */,
 			);
 			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
+		C8745A2829AC1004002B73EC /* ChoiceForExchange */ = {
+			isa = PBXGroup;
+			children = (
+				C8745A2929AC102C002B73EC /* ListForChoiceCurrencies.swift */,
+			);
+			path = ChoiceForExchange;
+			sourceTree = "<group>";
+		};
 		C8A2300A299470CA00A15558 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				C8951B8E2994772200248DE8 /* RateCell.swift */,
 				C8A2300D299471F500A15558 /* SettingCell.swift */,
 				C8951B9B299BE4F300248DE8 /* BankCell.swift */,
 				C864DFB8298F228B00C7F549 /* TableViewCell.swift */,
-				C8951B9D299DD69400248DE8 /* DateForToday.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -242,7 +233,6 @@
 				C864DFA1298F0F8900C7F549 /* Assets.xcassets in Resources */,
 				C8745A0829A7BACA002B73EC /* unique.storyboard in Resources */,
 				C864DFB3298F192200C7F549 /* rates in Resources */,
-				C8951B912994773100248DE8 /* RateCell.xib in Resources */,
 				C8951BA029A5119200248DE8 /* ratesAllCurrencies in Resources */,
 				C8A2300929946FA300A15558 /* SettingCell.xib in Resources */,
 				C864DF9F298F0F8700C7F549 /* Main.storyboard in Resources */,
@@ -258,7 +248,6 @@
 			files = (
 				C864DFB9298F228B00C7F549 /* TableViewCell.swift in Sources */,
 				C89FA4AE299053D100357C8B /* CoursesVC.swift in Sources */,
-				C8A2300729931B6000A15558 /* LaunchScreenController.swift in Sources */,
 				C8951B9C299BE4F300248DE8 /* BankCell.swift in Sources */,
 				C864DF98298F0F8700C7F549 /* AppDelegate.swift in Sources */,
 				C864DF9A298F0F8700C7F549 /* SceneDelegate.swift in Sources */,
@@ -266,11 +255,10 @@
 				C864DFB1298F10B200C7F549 /* Model.swift in Sources */,
 				C8951B96299871C400248DE8 /* BanksVC.swift in Sources */,
 				C8951B9429986F6700248DE8 /* BanksModel.swift in Sources */,
-				C8951B8F2994772200248DE8 /* RateCell.swift in Sources */,
 				C8A2300E299471F500A15558 /* SettingCell.swift in Sources */,
 				C85CBD6D29908B87002338FE /* ExchangeVC.swift in Sources */,
-				C8951B9E299DD69400248DE8 /* DateForToday.swift in Sources */,
 				C8A230102994731800A15558 /* SettingsVC.swift in Sources */,
+				C8745A2A29AC102C002B73EC /* ListForChoiceCurrencies.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

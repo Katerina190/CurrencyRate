@@ -48,12 +48,13 @@ extension CoursesVC: UITableViewDelegate, UITableViewDataSource {
         return 130
     }
     
-    
-   
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "\(TableViewCell.self)", for: indexPath) as? TableViewCell
         let post = currencies[indexPath.row]
+        
+        let flagImage = UIImage(named: "\(post.Cur_Abbreviation)")
+        cell?.flagImage.image = flagImage
+    
         cell?.setup(Cur_Name: post.Cur_Name, cur_value: post.Cur_OfficialRate, cur_scale: post.Cur_Scale)
         return cell ?? UITableViewCell()
     }
