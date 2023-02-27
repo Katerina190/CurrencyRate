@@ -39,16 +39,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLj-1u-2bH">
-                                <rect key="frame" x="30" y="213" width="333" height="38"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="BYN" cornerStyle="medium">
-                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
-                                </buttonConfiguration>
+                                <rect key="frame" x="30" y="213" width="333" height="14"/>
+                                <buttonConfiguration key="configuration" style="tinted" cornerStyle="medium"/>
                                 <connections>
                                     <action selector="buttonFromMoney:" destination="zer-Ng-x8R" eventType="touchUpInside" id="lMm-nq-rgq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amq-aN-VaP">
-                                <rect key="frame" x="30" y="372" width="333" height="38"/>
+                                <rect key="frame" x="30" y="348" width="333" height="38"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="BYN" cornerStyle="medium">
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
@@ -58,7 +56,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cqd-xw-9vM">
-                                <rect key="frame" x="30" y="430" width="333" height="40"/>
+                                <rect key="frame" x="30" y="406" width="333" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" systemColor="systemBlueColor"/>
                                 <constraints>
@@ -68,7 +66,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3O3-4m-DRT">
-                                <rect key="frame" x="30" y="271" width="333" height="40"/>
+                                <rect key="frame" x="30" y="247" width="333" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="FJb-CS-ATs"/>
@@ -80,7 +78,7 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Конвертация в:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FSN-hb-nhv">
-                                <rect key="frame" x="30" y="331" width="333" height="21"/>
+                                <rect key="frame" x="30" y="307" width="333" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -123,6 +121,7 @@
                         <outlet property="resultFrom" destination="3O3-4m-DRT" id="pya-5k-yp9"/>
                         <outlet property="resultTo" destination="Cqd-xw-9vM" id="73H-Iz-Yt3"/>
                         <outlet property="rightButtonDone" destination="uFh-uK-LXC" id="oWR-Z6-ies"/>
+                        <segue destination="hsd-6f-4b4" kind="show" identifier="changetitlebuttons" id="oAv-1f-27g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qjf-AA-Sc6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -134,7 +133,7 @@
             </objects>
             <point key="canvasLocation" x="2563" y="-468"/>
         </scene>
-        <!--List For Choice Currencies-->
+        <!--Item-->
         <scene sceneID="FbA-ya-VNo">
             <objects>
                 <viewController storyboardIdentifier="ListForChoiceCurrencies" id="ZE0-gL-ios" customClass="ListForChoiceCurrencies" customModule="CurrencyRate" customModuleProvider="target" sceneMemberID="viewController">
@@ -143,8 +142,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="n2g-hg-Zgg">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellForChooseCurrency" id="2sa-pB-9x2" customClass="CellForChooseCurrency" customModule="CurrencyRate" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="86.333335876464844"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2sa-pB-9x2" id="fw0-QF-CKW">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="86.333335876464844"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5n-Zj-wyf">
+                                                    <rect key="frame" x="40" y="31" width="313" height="24.333333333333329"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="L5n-Zj-wyf" firstAttribute="top" secondItem="fw0-QF-CKW" secondAttribute="topMargin" constant="20" id="4ue-ZR-P44"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="L5n-Zj-wyf" secondAttribute="bottom" constant="20" id="HOB-3l-uIh"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="L5n-Zj-wyf" secondAttribute="trailing" constant="20" id="nBn-as-kB9"/>
+                                                <constraint firstItem="L5n-Zj-wyf" firstAttribute="leading" secondItem="fw0-QF-CKW" secondAttribute="leadingMargin" constant="20" id="stU-rn-0qo"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labelCurrency" destination="L5n-Zj-wyf" id="Veb-3b-f3u"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="COk-gc-c11"/>
@@ -156,7 +182,15 @@
                             <constraint firstItem="COk-gc-c11" firstAttribute="bottom" secondItem="n2g-hg-Zgg" secondAttribute="bottom" id="cll-Zh-bTn"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="2tr-iu-dnC"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="Gac-fX-sOq"/>
+                    <navigationItem key="navigationItem" id="2tr-iu-dnC">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="cancel" id="5jq-ao-lyh">
+                            <connections>
+                                <action selector="didTapCancel:" destination="ZE0-gL-ios" id="II8-pK-iuU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableViewCurrencies" destination="n2g-hg-Zgg" id="pet-xZ-Vwz"/>
                     </connections>
@@ -437,6 +471,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hsd-6f-4b4" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="oPq-2h-nQd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kjU-xd-B3w">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

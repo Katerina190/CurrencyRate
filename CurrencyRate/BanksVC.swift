@@ -44,8 +44,5 @@ extension BanksVC: UITableViewDataSource {
         cell?.setup(bankName: post.bank_name, usdRate: post.usd_buy_price, usdRateSell: post.usd_sell_price, euroRate: post.eur_buy_price, euroRateSell: post.eur_sell_price, rusRate: post.rub_buy_price, rusRateSell: post.rub_sell_price)
         return cell ?? UITableViewCell()
     }
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        return "Banks"
-//    }
 
 }

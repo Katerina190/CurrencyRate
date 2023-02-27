@@ -27,12 +27,12 @@ final class CoursesVC: UIViewController {
         }
     }
         
-        @IBOutlet private weak var tableView: UITableView! {
-            didSet {
-                tableView.dataSource = self
-            }
+    @IBOutlet private weak var tableView: UITableView! {
+        didSet {
+            tableView.dataSource = self
         }
     }
+}
 extension CoursesVC: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

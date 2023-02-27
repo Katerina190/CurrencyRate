@@ -9,11 +9,13 @@ import UIKit
 
 final class ExchangeVC: UIViewController {
     
+  // var myCV = ListForChoiceCurrencies()
+    
     @IBOutlet private weak var resultFrom: UITextField!
     @IBOutlet private weak var resultTo: UITextField!
     @IBOutlet private weak var actualDateLabel: UILabel!
-    @IBOutlet private weak var buttonTo: UIButton!
-    @IBOutlet private weak var buttonFrom: UIButton!
+    @IBOutlet weak var buttonTo: UIButton!
+    @IBOutlet weak var buttonFrom: UIButton!
     @IBOutlet private weak var rightButtonDone: UIBarButtonItem!
     
     private var model: Model?
@@ -22,22 +24,23 @@ final class ExchangeVC: UIViewController {
     var toCurrency: Model?
     var fromCurrency: Model?
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         networkService.loadPosts { [weak self] models in
             self?.model = models.first
             self!.toCurrency  = models.first
             self!.fromCurrency = models[8]
             self!.updateUI()
+            self!.renewButtons()
         }
         resultFrom.delegate = self
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        renewButtons()
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+////        renewButtons()
+//    }
     
     //MARK: - function for dateLabel
     
@@ -61,7 +64,7 @@ final class ExchangeVC: UIViewController {
     }
     //MARK: - function for convert money
     
-    private func convertMoney(amount: Double?) -> String {
+     func convertMoney(amount: Double?) -> String {
         guard let fromCurrency = fromCurrency,
                 let toCurrency = toCurrency,
                 let amount = amount else {
@@ -92,11 +95,21 @@ final class ExchangeVC: UIViewController {
         navigationItem.rightBarButtonItem = nil
     }
     
+    func presentListCurrencyVC() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let fromVC = storyboard.instantiateViewController(withIdentifier: "\(ListForChoiceCurrencies.self)")
+        navigationController?.present(fromVC, animated: true)
+    }
+    
+    
+    
     @IBAction private func buttonFromMoney(_ sendeer: AnyObject) {
+       presentListCurrencyVC()
+       // myCV.choosenCurrency = .from
         
     }
     @IBAction private func buttonToMoney(_ sendeer: AnyObject) {
-        
+      // myCV.choosenCurrency = .to
     }
         
 }

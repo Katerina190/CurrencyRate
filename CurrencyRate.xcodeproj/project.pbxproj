@@ -19,6 +19,7 @@
 		C864DFBE298F23D800C7F549 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C864DFBD298F23D800C7F549 /* NetworkService.swift */; };
 		C8745A0829A7BACA002B73EC /* unique.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8745A0729A7BACA002B73EC /* unique.storyboard */; };
 		C8745A2A29AC102C002B73EC /* ListForChoiceCurrencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8745A2929AC102C002B73EC /* ListForChoiceCurrencies.swift */; };
+		C8745A2C29AC28F4002B73EC /* CellForChooseCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8745A2B29AC28F4002B73EC /* CellForChooseCurrency.swift */; };
 		C8951B9429986F6700248DE8 /* BanksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8951B9329986F6700248DE8 /* BanksModel.swift */; };
 		C8951B96299871C400248DE8 /* BanksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8951B95299871C400248DE8 /* BanksVC.swift */; };
 		C8951B982999D43400248DE8 /* BankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8951B972999D43400248DE8 /* BankCell.xib */; };
@@ -45,6 +46,7 @@
 		C864DFBD298F23D800C7F549 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		C8745A0729A7BACA002B73EC /* unique.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = unique.storyboard; sourceTree = "<group>"; };
 		C8745A2929AC102C002B73EC /* ListForChoiceCurrencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListForChoiceCurrencies.swift; sourceTree = "<group>"; };
+		C8745A2B29AC28F4002B73EC /* CellForChooseCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellForChooseCurrency.swift; sourceTree = "<group>"; };
 		C8951B9229986F4200248DE8 /* Empty.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Empty.md; sourceTree = "<group>"; };
 		C8951B9329986F6700248DE8 /* BanksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksModel.swift; sourceTree = "<group>"; };
 		C8951B95299871C400248DE8 /* BanksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksVC.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				C8A2300D299471F500A15558 /* SettingCell.swift */,
 				C8951B9B299BE4F300248DE8 /* BankCell.swift */,
 				C864DFB8298F228B00C7F549 /* TableViewCell.swift */,
+				C8745A2B29AC28F4002B73EC /* CellForChooseCurrency.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				C864DFB1298F10B200C7F549 /* Model.swift in Sources */,
 				C8951B96299871C400248DE8 /* BanksVC.swift in Sources */,
 				C8951B9429986F6700248DE8 /* BanksModel.swift in Sources */,
+				C8745A2C29AC28F4002B73EC /* CellForChooseCurrency.swift in Sources */,
 				C8A2300E299471F500A15558 /* SettingCell.swift in Sources */,
 				C85CBD6D29908B87002338FE /* ExchangeVC.swift in Sources */,
 				C8A230102994731800A15558 /* SettingsVC.swift in Sources */,
