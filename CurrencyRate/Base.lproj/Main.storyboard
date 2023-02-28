@@ -39,14 +39,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLj-1u-2bH">
-                                <rect key="frame" x="30" y="213" width="333" height="14"/>
-                                <buttonConfiguration key="configuration" style="tinted" cornerStyle="medium"/>
+                                <rect key="frame" x="30" y="213" width="333" height="34.333333333333343"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="      " cornerStyle="medium"/>
                                 <connections>
                                     <action selector="buttonFromMoney:" destination="zer-Ng-x8R" eventType="touchUpInside" id="lMm-nq-rgq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amq-aN-VaP">
-                                <rect key="frame" x="30" y="348" width="333" height="38"/>
+                                <rect key="frame" x="30" y="368.33333333333331" width="333" height="38"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="BYN" cornerStyle="medium">
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
@@ -56,7 +56,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cqd-xw-9vM">
-                                <rect key="frame" x="30" y="406" width="333" height="40"/>
+                                <rect key="frame" x="30" y="426.33333333333331" width="333" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" systemColor="systemBlueColor"/>
                                 <constraints>
@@ -66,7 +66,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3O3-4m-DRT">
-                                <rect key="frame" x="30" y="247" width="333" height="40"/>
+                                <rect key="frame" x="30" y="267.33333333333331" width="333" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="FJb-CS-ATs"/>
@@ -78,7 +78,7 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Конвертация в:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FSN-hb-nhv">
-                                <rect key="frame" x="30" y="307" width="333" height="21"/>
+                                <rect key="frame" x="30" y="327.33333333333331" width="333" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -121,7 +121,6 @@
                         <outlet property="resultFrom" destination="3O3-4m-DRT" id="pya-5k-yp9"/>
                         <outlet property="resultTo" destination="Cqd-xw-9vM" id="73H-Iz-Yt3"/>
                         <outlet property="rightButtonDone" destination="uFh-uK-LXC" id="oWR-Z6-ies"/>
-                        <segue destination="hsd-6f-4b4" kind="show" identifier="changetitlebuttons" id="oAv-1f-27g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qjf-AA-Sc6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

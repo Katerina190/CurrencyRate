@@ -7,10 +7,12 @@
 
 import UIKit
 
+protocol CurrencySelectionDelegate: AnyObject {
+    func didSelect(currency: Model, forType type: SelectedCurrency)
+}
+
 final class ExchangeVC: UIViewController {
-    
-  // var myCV = ListForChoiceCurrencies()
-    
+        
     @IBOutlet private weak var resultFrom: UITextField!
     @IBOutlet private weak var resultTo: UITextField!
     @IBOutlet private weak var actualDateLabel: UILabel!
@@ -24,8 +26,6 @@ final class ExchangeVC: UIViewController {
     var toCurrency: Model?
     var fromCurrency: Model?
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         networkService.loadPosts { [weak self] models in
@@ -35,12 +35,9 @@ final class ExchangeVC: UIViewController {
             self!.updateUI()
             self!.renewButtons()
         }
+        //buttonFrom.setTitle(buttonTitle, for: .normal)
         resultFrom.delegate = self
     }
-    
-//    override func viewWillAppear(_ animated: Bool) {
-////        renewButtons()
-//    }
     
     //MARK: - function for dateLabel
     
@@ -50,17 +47,6 @@ final class ExchangeVC: UIViewController {
         let formattedDate = dateFormatter.string(from: Date())
         actualDateLabel.text = "Курсы за \(formattedDate)"
         
-//        let inputDateFormatter = DateFormatter()
-//        inputDateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
-//
-//        let outputDateFormatter = DateFormatter()
-//        outputDateFormatter.dateFormat = "dd.MM.yyyy"
-//
-//        if let date = inputDateFormatter.date(from: model.Date) {
-//            let formattedDate = outputDateFormatter.string(from: date)
-//
-//            actualDateLabel.text = "Курсы за \(formattedDate)"
-//        }
     }
     //MARK: - function for convert money
     
@@ -86,8 +72,17 @@ final class ExchangeVC: UIViewController {
     //MARK: - function for buttons
     
     func renewButtons() {
-        buttonFrom.setTitle(fromCurrency?.Cur_Abbreviation, for: UIControl.State.normal)
-        buttonTo.setTitle(toCurrency?.Cur_Abbreviation, for: UIControl.State.normal)
+        buttonFrom.setTitle(fromCurrency?.Cur_Abbreviation, for: .normal)
+        buttonTo.setTitle(toCurrency?.Cur_Abbreviation, for: .normal)
+    }
+    
+    var buttonTitle: String = "" {
+        didSet {
+            if buttonFrom != nil {
+                buttonFrom.setTitle(buttonTitle, for: .normal)
+            }
+            
+        }
     }
     
     @IBAction private func barButtonDone(_ sender: AnyObject) {
@@ -95,30 +90,60 @@ final class ExchangeVC: UIViewController {
         navigationItem.rightBarButtonItem = nil
     }
     
-    func presentListCurrencyVC() {
+    func presentListCurrencyVC(buttonType: SelectedCurrency) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let fromVC = storyboard.instantiateViewController(withIdentifier: "\(ListForChoiceCurrencies.self)")
-        navigationController?.present(fromVC, animated: true)
-    }
-    
-    
-    
-    @IBAction private func buttonFromMoney(_ sendeer: AnyObject) {
-       presentListCurrencyVC()
-       // myCV.choosenCurrency = .from
+            let fromVC = storyboard.instantiateViewController(withIdentifier: "\(ListForChoiceCurrencies.self)") as! ListForChoiceCurrencies
+            fromVC.delegate = self
+            fromVC.choosenCurrency = buttonType
+            navigationController?.present(fromVC, animated: true)
         
     }
+    
+    func clearTextFields() {
+        resultTo.text = ""
+        resultFrom.text = ""
+    }
+    
+    @IBAction private func buttonFromMoney(_ sendeer: AnyObject) {
+        presentListCurrencyVC(buttonType: .from)
+        clearTextFields()
+    }
+    
     @IBAction private func buttonToMoney(_ sendeer: AnyObject) {
-      // myCV.choosenCurrency = .to
+        presentListCurrencyVC(buttonType: .to)
+        clearTextFields()
     }
         
 }
+
     
 extension ExchangeVC: UITextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         navigationItem.rightBarButtonItem = rightButtonDone
         return true
     }
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField == resultFrom {
+            let newString = (textField.text as NSString?)?.replacingCharacters(in: range, with: string)
+            
+            // Если новая строка пустая, очистите resultTo
+            if newString?.isEmpty == true {
+                resultTo.text = ""
+            }
+        }
+        
+        return true
+    }
 }
 
+extension ExchangeVC: CurrencySelectionDelegate {
+    func didSelect(currency: Model, forType type: SelectedCurrency) {
+        if type == .from {
+            fromCurrency = currency
+        } else {
+            toCurrency = currency
+        } 
+        renewButtons()
+    }
+}
 

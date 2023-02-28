@@ -24,7 +24,6 @@
 		C8951B96299871C400248DE8 /* BanksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8951B95299871C400248DE8 /* BanksVC.swift */; };
 		C8951B982999D43400248DE8 /* BankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8951B972999D43400248DE8 /* BankCell.xib */; };
 		C8951B9C299BE4F300248DE8 /* BankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8951B9B299BE4F300248DE8 /* BankCell.swift */; };
-		C8951BA029A5119200248DE8 /* ratesAllCurrencies in Resources */ = {isa = PBXBuildFile; fileRef = C8951B9F29A5119200248DE8 /* ratesAllCurrencies */; };
 		C89FA4AE299053D100357C8B /* CoursesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89FA4AD299053D100357C8B /* CoursesVC.swift */; };
 		C8A2300929946FA300A15558 /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8A2300829946FA300A15558 /* SettingCell.xib */; };
 		C8A2300E299471F500A15558 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A2300D299471F500A15558 /* SettingCell.swift */; };
@@ -52,7 +51,6 @@
 		C8951B95299871C400248DE8 /* BanksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksVC.swift; sourceTree = "<group>"; };
 		C8951B972999D43400248DE8 /* BankCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BankCell.xib; sourceTree = "<group>"; };
 		C8951B9B299BE4F300248DE8 /* BankCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCell.swift; sourceTree = "<group>"; };
-		C8951B9F29A5119200248DE8 /* ratesAllCurrencies */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ratesAllCurrencies; path = ../../../../../Downloads/ratesAllCurrencies; sourceTree = "<group>"; };
 		C89FA4AD299053D100357C8B /* CoursesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesVC.swift; sourceTree = "<group>"; };
 		C8A2300829946FA300A15558 /* SettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingCell.xib; sourceTree = "<group>"; };
 		C8A2300D299471F500A15558 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
@@ -94,18 +92,18 @@
 				C864DF9D298F0F8700C7F549 /* Main.storyboard */,
 				C89FA4AD299053D100357C8B /* CoursesVC.swift */,
 				C85CBD6C29908B87002338FE /* ExchangeVC.swift */,
+				C8745A2829AC1004002B73EC /* ChoiceCurrencyForExchange */,
 				C8951B95299871C400248DE8 /* BanksVC.swift */,
 				C8A2300F2994731800A15558 /* SettingsVC.swift */,
 				C864DFA0298F0F8900C7F549 /* Assets.xcassets */,
 				C864DFA2298F0F8900C7F549 /* LaunchScreen.storyboard */,
 				C864DFA5298F0F8900C7F549 /* Info.plist */,
-				C8745A2829AC1004002B73EC /* ChoiceForExchange */,
 				C8745A1929A98877002B73EC /* Xib */,
 				C8A2300A299470CA00A15558 /* Cells */,
 				C864DFBA298F235E00C7F549 /* NetworkService */,
 				C864DFAF298F10A200C7F549 /* Model */,
-				C8745A1A29A98D1D002B73EC /* LaunchScreen */,
 				C864DFAB298F102A00C7F549 /* Data */,
+				C8745A1A29A98D1D002B73EC /* LaunchScreen */,
 			);
 			path = CurrencyRate;
 			sourceTree = "<group>";
@@ -115,7 +113,6 @@
 			children = (
 				C864DFB2298F192200C7F549 /* rates */,
 				C8951B9229986F4200248DE8 /* Empty.md */,
-				C8951B9F29A5119200248DE8 /* ratesAllCurrencies */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -154,12 +151,12 @@
 			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
-		C8745A2829AC1004002B73EC /* ChoiceForExchange */ = {
+		C8745A2829AC1004002B73EC /* ChoiceCurrencyForExchange */ = {
 			isa = PBXGroup;
 			children = (
 				C8745A2929AC102C002B73EC /* ListForChoiceCurrencies.swift */,
 			);
-			path = ChoiceForExchange;
+			path = ChoiceCurrencyForExchange;
 			sourceTree = "<group>";
 		};
 		C8A2300A299470CA00A15558 /* Cells */ = {
@@ -236,7 +233,6 @@
 				C864DFA1298F0F8900C7F549 /* Assets.xcassets in Resources */,
 				C8745A0829A7BACA002B73EC /* unique.storyboard in Resources */,
 				C864DFB3298F192200C7F549 /* rates in Resources */,
-				C8951BA029A5119200248DE8 /* ratesAllCurrencies in Resources */,
 				C8A2300929946FA300A15558 /* SettingCell.xib in Resources */,
 				C864DF9F298F0F8700C7F549 /* Main.storyboard in Resources */,
 			);

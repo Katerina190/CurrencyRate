@@ -9,9 +9,9 @@ import UIKit
 
 
 final class BanksVC: UIViewController {
+    
     private var banks : [BanksModel] = []
     private var networkService = NetworkService()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +23,6 @@ final class BanksVC: UIViewController {
         networkService.loadBanks { banks in
             self.banks = banks
             self.tableView.reloadData()
-            
-            
         }
     }
     

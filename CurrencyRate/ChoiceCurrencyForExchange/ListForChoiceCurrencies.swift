@@ -18,19 +18,17 @@ final class ListForChoiceCurrencies: UIViewController {
     var currencies: [Model]  = []
     private var networkService = NetworkService()
     
+    
+    weak var delegate: CurrencySelectionDelegate?
+    
+        
     var choosenCurrency: SelectedCurrency = .from
+    
     @IBOutlet private weak var tableViewCurrencies: UITableView! {
         didSet {
             tableViewCurrencies.dataSource = self
         }
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "changetitlebuttons" {
-//            let destinationVC = segue.destination as! ExchangeVC
-//            myVC = destinationVC
-//        }
-//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,31 +72,11 @@ extension ListForChoiceCurrencies: UITableViewDataSource, UITableViewDelegate{
         1
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let currency = currencies[indexPath.row]
-//        if choosenCurrency == .from {
-//            myVC.fromCurrency = currency
-//            myVC.buttonFrom.setTitle("OCHKO", for: UIControl.State.normal)
-//        }
-//        if choosenCurrency == .to {
-//            myVC.toCurrency = currency
-//        }
-//        myVC.renewButtons()
-//        print(myVC.fromCurrency)
-//        print(myVC.toCurrency)
-//        myVC.buttonFrom.setTitle(fromCurrency?.Cur_Abbreviation, for: UIControl.State.normal)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedCurrency = currencies[indexPath.row]
+           delegate?.didSelect(currency: selectedCurrency, forType: choosenCurrency)
+           dismiss(animated: true, completion: nil)
+        }
+        
     }
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let selectedCurrency = currencies[indexPath.row]
-//        if choosenCurrency == .from {
-//            myVC.fromCurrency = selectedCurrency
-//        }
-//        if choosenCurrency == .to {
-//            myVC.toCurrency = selectedCurrency
-//        }
-//
-//        
-//         }
-    
-    
 
