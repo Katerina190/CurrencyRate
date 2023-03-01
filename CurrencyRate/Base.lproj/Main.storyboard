@@ -46,7 +46,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amq-aN-VaP">
-                                <rect key="frame" x="30" y="368.33333333333331" width="333" height="38"/>
+                                <rect key="frame" x="30" y="371.33333333333331" width="333" height="38"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="BYN" cornerStyle="medium">
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
@@ -56,7 +56,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cqd-xw-9vM">
-                                <rect key="frame" x="30" y="426.33333333333331" width="333" height="40"/>
+                                <rect key="frame" x="30" y="429.33333333333331" width="333" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" systemColor="systemBlueColor"/>
                                 <constraints>
@@ -77,9 +77,9 @@
                                     <action selector="textFieldFromConvert" destination="zer-Ng-x8R" eventType="editingChanged" id="cZ9-ga-7Mh"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Конвертация в:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FSN-hb-nhv">
-                                <rect key="frame" x="30" y="327.33333333333331" width="333" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FSN-hb-nhv">
+                                <rect key="frame" x="30" y="327.33333333333331" width="333" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -118,6 +118,7 @@
                         <outlet property="actualDateLabel" destination="P0S-PY-ceL" id="wAi-ug-YKy"/>
                         <outlet property="buttonFrom" destination="NLj-1u-2bH" id="yYc-jc-xxh"/>
                         <outlet property="buttonTo" destination="amq-aN-VaP" id="L8e-Jq-wwe"/>
+                        <outlet property="labelConvert" destination="FSN-hb-nhv" id="gEA-3S-0JH"/>
                         <outlet property="resultFrom" destination="3O3-4m-DRT" id="pya-5k-yp9"/>
                         <outlet property="resultTo" destination="Cqd-xw-9vM" id="73H-Iz-Yt3"/>
                         <outlet property="rightButtonDone" destination="uFh-uK-LXC" id="oWR-Z6-ies"/>
@@ -227,51 +228,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4sA-4a-aVC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2563" y="998"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="vNZ-6s-lNu">
-            <objects>
-                <viewController id="bLY-g7-YoY" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="QXl-WO-8c8">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="xyu-av-35O"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="txi-fp-VP6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3508" y="781"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="HNd-sj-5m5">
-            <objects>
-                <viewController id="DRX-CC-CHe" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="wIh-MR-nq8">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="4dl-0A-yjB"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="X6D-aj-FM0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3500" y="1511"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="AXT-Uv-dZ2">
-            <objects>
-                <viewController id="scY-9q-ady" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="lQe-5W-JSr">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6Tf-68-56h"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Toh-Bm-9YP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4441" y="1223"/>
         </scene>
         <!--Exchange-->
         <scene sceneID="B3Y-04-bXp">

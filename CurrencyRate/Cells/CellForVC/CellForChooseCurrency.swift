@@ -13,7 +13,4 @@ final class CellForChooseCurrency: UITableViewCell {
     func config(label: String) {
         labelCurrency.text = "\(label)"
     }
-    @IBAction private func didTapOnCell(_ sender: UITableViewCell) {
-        
-    }
 }

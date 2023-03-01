@@ -9,9 +9,7 @@ import UIKit
 
 class SettingCell: UITableViewCell {
     
-    @IBOutlet private weak var infoLabel: UILabel!
-    @IBOutlet private weak var infoButton: UIButton!
-    
+    @IBOutlet private weak var infoLabel: UILabel!    
     
     
      func configure(with info: String) {

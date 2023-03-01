@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+// MARK: - protocol
 protocol CurrencySelectionDelegate: AnyObject {
     func didSelect(currency: Model, forType type: SelectedCurrency)
 }
@@ -19,6 +19,7 @@ final class ExchangeVC: UIViewController {
     @IBOutlet weak var buttonTo: UIButton!
     @IBOutlet weak var buttonFrom: UIButton!
     @IBOutlet private weak var rightButtonDone: UIBarButtonItem!
+    @IBOutlet private weak var labelConvert: UILabel!
     
     private var model: Model?
     private var networkService = NetworkService()
@@ -36,6 +37,7 @@ final class ExchangeVC: UIViewController {
             self!.renewButtons()
         }
         //buttonFrom.setTitle(buttonTitle, for: .normal)
+        labelConvert.text = "Convert in:"
         resultFrom.delegate = self
     }
     
@@ -45,7 +47,7 @@ final class ExchangeVC: UIViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd.MM.yyyy"
         let formattedDate = dateFormatter.string(from: Date())
-        actualDateLabel.text = "Курсы за \(formattedDate)"
+        actualDateLabel.text = "Courses for \(formattedDate)"
         
     }
     //MARK: - function for convert money
@@ -56,7 +58,10 @@ final class ExchangeVC: UIViewController {
                 let amount = amount else {
             return ""
         }
-        let d = ((Double(fromCurrency.Cur_Scale) * fromCurrency.Cur_OfficialRate) /  (Double(toCurrency.Cur_Scale) * toCurrency.Cur_OfficialRate)) * amount
+         print(fromCurrency)
+         print(toCurrency)
+//        let d = ((Double(fromCurrency.Cur_Scale) * fromCurrency.Cur_OfficialRate) /  (Double(toCurrency.Cur_Scale) * toCurrency.Cur_OfficialRate)) * amount
+         let d = ((fromCurrency.Cur_OfficialRate / Double(fromCurrency.Cur_Scale)) /  (toCurrency.Cur_OfficialRate / Double(toCurrency.Cur_Scale))) * amount
         return String(d)
 
     }
@@ -90,6 +95,7 @@ final class ExchangeVC: UIViewController {
         navigationItem.rightBarButtonItem = nil
     }
     
+    //MARK: - func for present ListForChoiceCurrencies view controller
     func presentListCurrencyVC(buttonType: SelectedCurrency) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let fromVC = storyboard.instantiateViewController(withIdentifier: "\(ListForChoiceCurrencies.self)") as! ListForChoiceCurrencies
@@ -117,6 +123,7 @@ final class ExchangeVC: UIViewController {
 }
 
     
+// MARK: - extendions
 extension ExchangeVC: UITextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         navigationItem.rightBarButtonItem = rightButtonDone

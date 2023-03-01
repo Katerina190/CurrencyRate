@@ -1,0 +1,54 @@
+
+/* Class = "UITabBarItem"; title = "Exchange"; ObjectID = "4L0-za-i6I"; */
+"4L0-za-i6I.title" = "Обмен";
+
+/* Class = "UILabel"; text = "123"; ObjectID = "FSN-hb-nhv"; */
+"FSN-hb-nhv.text" = "Конвертировать в:";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "Gac-fX-sOq"; */
+"Gac-fX-sOq.title" = "Item";
+
+/* Class = "UINavigationItem"; title = "Banks"; ObjectID = "I9E-RL-DhN"; */
+"I9E-RL-DhN.title" = "Банки";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "L5n-Zj-wyf"; */
+"L5n-Zj-wyf.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "MYO-YI-tCV"; */
+"MYO-YI-tCV.text" = "Label";
+
+/* Class = "UIButton"; configuration.title = "      "; ObjectID = "NLj-1u-2bH"; */
+"NLj-1u-2bH.configuration.title" = "      ";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "P0S-PY-ceL"; */
+"P0S-PY-ceL.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "Settings"; ObjectID = "PBm-xq-QFd"; */
+"PBm-xq-QFd.title" = "Настройки";
+
+/* Class = "UINavigationItem"; title = "Settings"; ObjectID = "Rbe-iH-gxD"; */
+"Rbe-iH-gxD.title" = "Настройки";
+
+/* Class = "UINavigationItem"; title = "Courses on today"; ObjectID = "UEi-x2-ofQ"; */
+"UEi-x2-ofQ.title" = "Курсы на сегодня";
+
+/* Class = "UITabBarItem"; title = "Currencies"; ObjectID = "Uhz-pN-as5"; */
+"Uhz-pN-as5.title" = "Курсы";
+
+/* Class = "UIButton"; configuration.title = "BYN"; ObjectID = "amq-aN-VaP"; */
+"amq-aN-VaP.configuration.title" = "BYN";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "amq-aN-VaP"; */
+"amq-aN-VaP.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "f2i-Dr-W1G"; */
+"f2i-Dr-W1G.text" = "Label";
+
+/* Class = "UIBarButtonItem"; title = "Готово"; ObjectID = "uFh-uK-LXC"; */
+"uFh-uK-LXC.title" = "Готово";
+
+/* Class = "UINavigationItem"; title = "Exchange "; ObjectID = "z0b-sj-3Dj"; */
+"z0b-sj-3Dj.title" = "Обмен";
+
+/* Class = "UITabBarItem"; title = "Banks"; ObjectID = "z69-ft-SE1"; */
+"z69-ft-SE1.title" = "Банки";

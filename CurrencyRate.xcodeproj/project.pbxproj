@@ -22,12 +22,16 @@
 		C8745A2C29AC28F4002B73EC /* CellForChooseCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8745A2B29AC28F4002B73EC /* CellForChooseCurrency.swift */; };
 		C8951B9429986F6700248DE8 /* BanksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8951B9329986F6700248DE8 /* BanksModel.swift */; };
 		C8951B96299871C400248DE8 /* BanksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8951B95299871C400248DE8 /* BanksVC.swift */; };
-		C8951B982999D43400248DE8 /* BankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8951B972999D43400248DE8 /* BankCell.xib */; };
 		C8951B9C299BE4F300248DE8 /* BankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8951B9B299BE4F300248DE8 /* BankCell.swift */; };
 		C89FA4AE299053D100357C8B /* CoursesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89FA4AD299053D100357C8B /* CoursesVC.swift */; };
 		C8A2300929946FA300A15558 /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8A2300829946FA300A15558 /* SettingCell.xib */; };
 		C8A2300E299471F500A15558 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A2300D299471F500A15558 /* SettingCell.swift */; };
 		C8A230102994731800A15558 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A2300F2994731800A15558 /* SettingsVC.swift */; };
+		C8CC459A29AECDDC0003DA4B /* NotificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8CC459929AECDDC0003DA4B /* NotificationCell.xib */; };
+		C8CC459D29AECDFA0003DA4B /* BankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8CC459C29AECDFA0003DA4B /* BankCell.xib */; };
+		C8CC45AB29AEE8BE0003DA4B /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CC45AA29AEE8BE0003DA4B /* NotificationCell.swift */; };
+		C8CC45AD29AEEAE80003DA4B /* ContactUsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8CC45AC29AEEAE80003DA4B /* ContactUsCell.xib */; };
+		C8CC45B029AEEB500003DA4B /* ContactUsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CC45AF29AEEB500003DA4B /* ContactUsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,12 +53,16 @@
 		C8951B9229986F4200248DE8 /* Empty.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Empty.md; sourceTree = "<group>"; };
 		C8951B9329986F6700248DE8 /* BanksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksModel.swift; sourceTree = "<group>"; };
 		C8951B95299871C400248DE8 /* BanksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksVC.swift; sourceTree = "<group>"; };
-		C8951B972999D43400248DE8 /* BankCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BankCell.xib; sourceTree = "<group>"; };
 		C8951B9B299BE4F300248DE8 /* BankCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCell.swift; sourceTree = "<group>"; };
 		C89FA4AD299053D100357C8B /* CoursesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesVC.swift; sourceTree = "<group>"; };
 		C8A2300829946FA300A15558 /* SettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingCell.xib; sourceTree = "<group>"; };
 		C8A2300D299471F500A15558 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		C8A2300F2994731800A15558 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		C8CC459929AECDDC0003DA4B /* NotificationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationCell.xib; sourceTree = "<group>"; };
+		C8CC459C29AECDFA0003DA4B /* BankCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BankCell.xib; sourceTree = "<group>"; };
+		C8CC45AA29AEE8BE0003DA4B /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
+		C8CC45AC29AEEAE80003DA4B /* ContactUsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactUsCell.xib; sourceTree = "<group>"; };
+		C8CC45AF29AEEB500003DA4B /* ContactUsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,8 +145,8 @@
 		C8745A1929A98877002B73EC /* Xib */ = {
 			isa = PBXGroup;
 			children = (
-				C8951B972999D43400248DE8 /* BankCell.xib */,
-				C8A2300829946FA300A15558 /* SettingCell.xib */,
+				C8CC459B29AECDE20003DA4B /* CellForBanks */,
+				C8F828C129AEC9B900A129D5 /* CellsForSettings */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -162,12 +170,48 @@
 		C8A2300A299470CA00A15558 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				C8CC45AE29AEEB180003DA4B /* CellForVC */,
+				C8CC45A929AEE88E0003DA4B /* CellsForSettings */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		C8CC459B29AECDE20003DA4B /* CellForBanks */ = {
+			isa = PBXGroup;
+			children = (
+				C8CC459C29AECDFA0003DA4B /* BankCell.xib */,
+			);
+			name = CellForBanks;
+			sourceTree = "<group>";
+		};
+		C8CC45A929AEE88E0003DA4B /* CellsForSettings */ = {
+			isa = PBXGroup;
+			children = (
 				C8A2300D299471F500A15558 /* SettingCell.swift */,
+				C8CC45AA29AEE8BE0003DA4B /* NotificationCell.swift */,
+				C8CC45AF29AEEB500003DA4B /* ContactUsCell.swift */,
+			);
+			name = CellsForSettings;
+			sourceTree = "<group>";
+		};
+		C8CC45AE29AEEB180003DA4B /* CellForVC */ = {
+			isa = PBXGroup;
+			children = (
 				C8951B9B299BE4F300248DE8 /* BankCell.swift */,
 				C864DFB8298F228B00C7F549 /* TableViewCell.swift */,
 				C8745A2B29AC28F4002B73EC /* CellForChooseCurrency.swift */,
 			);
-			path = Cells;
+			path = CellForVC;
+			sourceTree = "<group>";
+		};
+		C8F828C129AEC9B900A129D5 /* CellsForSettings */ = {
+			isa = PBXGroup;
+			children = (
+				C8A2300829946FA300A15558 /* SettingCell.xib */,
+				C8CC459929AECDDC0003DA4B /* NotificationCell.xib */,
+				C8CC45AC29AEEAE80003DA4B /* ContactUsCell.xib */,
+			);
+			path = CellsForSettings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,11 +272,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8951B982999D43400248DE8 /* BankCell.xib in Resources */,
 				C864DFA4298F0F8900C7F549 /* LaunchScreen.storyboard in Resources */,
+				C8CC459D29AECDFA0003DA4B /* BankCell.xib in Resources */,
 				C864DFA1298F0F8900C7F549 /* Assets.xcassets in Resources */,
 				C8745A0829A7BACA002B73EC /* unique.storyboard in Resources */,
 				C864DFB3298F192200C7F549 /* rates in Resources */,
+				C8CC45AD29AEEAE80003DA4B /* ContactUsCell.xib in Resources */,
+				C8CC459A29AECDDC0003DA4B /* NotificationCell.xib in Resources */,
 				C8A2300929946FA300A15558 /* SettingCell.xib in Resources */,
 				C864DF9F298F0F8700C7F549 /* Main.storyboard in Resources */,
 			);
@@ -247,6 +293,7 @@
 			files = (
 				C864DFB9298F228B00C7F549 /* TableViewCell.swift in Sources */,
 				C89FA4AE299053D100357C8B /* CoursesVC.swift in Sources */,
+				C8CC45B029AEEB500003DA4B /* ContactUsCell.swift in Sources */,
 				C8951B9C299BE4F300248DE8 /* BankCell.swift in Sources */,
 				C864DF98298F0F8700C7F549 /* AppDelegate.swift in Sources */,
 				C864DF9A298F0F8700C7F549 /* SceneDelegate.swift in Sources */,
@@ -258,6 +305,7 @@
 				C8A2300E299471F500A15558 /* SettingCell.swift in Sources */,
 				C85CBD6D29908B87002338FE /* ExchangeVC.swift in Sources */,
 				C8A230102994731800A15558 /* SettingsVC.swift in Sources */,
+				C8CC45AB29AEE8BE0003DA4B /* NotificationCell.swift in Sources */,
 				C8745A2A29AC102C002B73EC /* ListForChoiceCurrencies.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +336,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -348,6 +397,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
