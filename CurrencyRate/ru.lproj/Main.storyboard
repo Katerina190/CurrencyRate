@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -32,7 +31,7 @@
             </objects>
             <point key="canvasLocation" x="546" y="-75"/>
         </scene>
-        <!--Обмен валюты-->
+        <!--Exchange -->
         <scene sceneID="XCj-Fk-pWW">
             <objects>
                 <viewController storyboardIdentifier="ExchangeVC" id="zer-Ng-x8R" customClass="ExchangeVC" customModule="CurrencyRate" customModuleProvider="target" sceneMemberID="viewController">
@@ -41,64 +40,59 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLj-1u-2bH">
-                                <rect key="frame" x="50" y="217" width="293" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="U7m-qu-4Sm"/>
-                                </constraints>
-                                <buttonConfiguration key="configuration" style="tinted" title="USD" cornerStyle="medium">
-                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
-                                    <color key="baseForegroundColor" systemColor="labelColor"/>
-                                    <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
+                                <rect key="frame" x="30" y="213" width="333" height="34.333333333333343"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="      " cornerStyle="medium">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="buttonFromMoney:" destination="zer-Ng-x8R" eventType="touchUpInside" id="lMm-nq-rgq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amq-aN-VaP">
-                                <rect key="frame" x="50" y="415" width="293" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="bj7-Rh-bzG"/>
-                                </constraints>
+                                <rect key="frame" x="30" y="371.33333333333331" width="333" height="38"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="BYN" cornerStyle="medium">
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
-                                    <color key="baseForegroundColor" systemColor="labelColor"/>
-                                    <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="buttonToMoney:" destination="zer-Ng-x8R" eventType="touchUpInside" id="xxy-yv-BLF"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cqd-xw-9vM">
-                                <rect key="frame" x="20" y="495" width="353" height="34"/>
-                                <color key="backgroundColor" name="BackgroundColor"/>
+                                <rect key="frame" x="30" y="429.33333333333331" width="333" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" systemColor="systemBlueColor"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="M8k-s8-V1W"/>
+                                </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3O3-4m-DRT">
-                                <rect key="frame" x="20" y="297" width="353" height="34"/>
-                                <color key="backgroundColor" name="BackgroundColor"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <rect key="frame" x="30" y="267.33333333333331" width="333" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="FJb-CS-ATs"/>
+                                </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                 <connections>
                                     <action selector="textFieldFromConvert" destination="zer-Ng-x8R" eventType="editingChanged" id="cZ9-ga-7Mh"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Конвертировать в:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FSN-hb-nhv">
-                                <rect key="frame" x="20" y="361" width="353" height="24"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FSN-hb-nhv">
+                                <rect key="frame" x="30" y="327.33333333333331" width="333" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P0S-PY-ceL">
-                                <rect key="frame" x="20" y="163" width="353" height="24"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Курсы на актуальную дату:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ip3-Sm-R93">
-                                <rect key="frame" x="20" y="123" width="353" height="30"/>
+                                <rect key="frame" x="20" y="133" width="353" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -107,30 +101,27 @@
                         <viewLayoutGuide key="safeArea" id="fQJ-Tv-yVb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="FSN-hb-nhv" firstAttribute="top" secondItem="3O3-4m-DRT" secondAttribute="bottom" constant="30" id="3DI-kJ-Rzm"/>
-                            <constraint firstItem="Ip3-Sm-R93" firstAttribute="top" secondItem="fQJ-Tv-yVb" secondAttribute="top" constant="20" id="7DP-Ys-uSL"/>
-                            <constraint firstItem="NLj-1u-2bH" firstAttribute="leading" secondItem="fQJ-Tv-yVb" secondAttribute="leading" constant="50" id="8hh-y9-4g1"/>
-                            <constraint firstItem="fQJ-Tv-yVb" firstAttribute="trailing" secondItem="FSN-hb-nhv" secondAttribute="trailing" constant="20" id="8kg-Qd-MPW"/>
-                            <constraint firstItem="fQJ-Tv-yVb" firstAttribute="trailing" secondItem="Ip3-Sm-R93" secondAttribute="trailing" constant="20" id="9lr-jh-cKY"/>
-                            <constraint firstItem="fQJ-Tv-yVb" firstAttribute="trailing" secondItem="amq-aN-VaP" secondAttribute="trailing" constant="50" id="DoE-iA-L8Z"/>
-                            <constraint firstItem="amq-aN-VaP" firstAttribute="leading" secondItem="fQJ-Tv-yVb" secondAttribute="leading" constant="50" id="Ds8-JW-orn"/>
-                            <constraint firstItem="NLj-1u-2bH" firstAttribute="top" secondItem="P0S-PY-ceL" secondAttribute="bottom" constant="30" id="GYh-P3-jAn"/>
-                            <constraint firstItem="amq-aN-VaP" firstAttribute="top" secondItem="FSN-hb-nhv" secondAttribute="bottom" constant="30" id="Lbt-PL-FcC"/>
-                            <constraint firstItem="fQJ-Tv-yVb" firstAttribute="trailing" secondItem="NLj-1u-2bH" secondAttribute="trailing" constant="50" id="Lm0-QE-3M6"/>
-                            <constraint firstItem="fQJ-Tv-yVb" firstAttribute="trailing" secondItem="3O3-4m-DRT" secondAttribute="trailing" constant="20" id="TJc-eB-x69"/>
-                            <constraint firstItem="FSN-hb-nhv" firstAttribute="leading" secondItem="fQJ-Tv-yVb" secondAttribute="leading" constant="20" id="TLY-W2-mhN"/>
-                            <constraint firstItem="3O3-4m-DRT" firstAttribute="leading" secondItem="fQJ-Tv-yVb" secondAttribute="leading" constant="20" id="UlF-pe-4pH"/>
-                            <constraint firstItem="P0S-PY-ceL" firstAttribute="top" secondItem="Ip3-Sm-R93" secondAttribute="bottom" constant="10" id="f6y-xv-w4N"/>
-                            <constraint firstItem="fQJ-Tv-yVb" firstAttribute="trailing" secondItem="P0S-PY-ceL" secondAttribute="trailing" constant="20" id="fQP-kL-E8m"/>
-                            <constraint firstItem="Cqd-xw-9vM" firstAttribute="top" secondItem="amq-aN-VaP" secondAttribute="bottom" constant="30" id="hW7-Fd-ChJ"/>
-                            <constraint firstItem="3O3-4m-DRT" firstAttribute="top" secondItem="NLj-1u-2bH" secondAttribute="bottom" constant="30" id="mmY-ou-lxF"/>
-                            <constraint firstItem="fQJ-Tv-yVb" firstAttribute="trailing" secondItem="Cqd-xw-9vM" secondAttribute="trailing" constant="20" id="mqf-75-mm5"/>
-                            <constraint firstItem="Ip3-Sm-R93" firstAttribute="leading" secondItem="fQJ-Tv-yVb" secondAttribute="leading" constant="20" id="ryI-NB-lDi"/>
-                            <constraint firstItem="Cqd-xw-9vM" firstAttribute="leading" secondItem="fQJ-Tv-yVb" secondAttribute="leading" constant="20" id="ylf-Jd-MOd"/>
-                            <constraint firstItem="P0S-PY-ceL" firstAttribute="leading" secondItem="fQJ-Tv-yVb" secondAttribute="leading" constant="20" id="zc7-IP-Pf6"/>
+                            <constraint firstItem="fQJ-Tv-yVb" firstAttribute="trailing" secondItem="P0S-PY-ceL" secondAttribute="trailing" constant="20" id="1Vd-Vy-O8h"/>
+                            <constraint firstItem="FSN-hb-nhv" firstAttribute="top" secondItem="3O3-4m-DRT" secondAttribute="bottom" constant="20" id="9on-hF-5c7"/>
+                            <constraint firstItem="fQJ-Tv-yVb" firstAttribute="trailing" secondItem="FSN-hb-nhv" secondAttribute="trailing" constant="30" id="BJu-eL-3V6"/>
+                            <constraint firstItem="Cqd-xw-9vM" firstAttribute="leading" secondItem="fQJ-Tv-yVb" secondAttribute="leading" constant="30" id="EGa-44-O4B"/>
+                            <constraint firstItem="P0S-PY-ceL" firstAttribute="top" secondItem="fQJ-Tv-yVb" secondAttribute="top" constant="30" id="Eqo-g6-i4y"/>
+                            <constraint firstItem="fQJ-Tv-yVb" firstAttribute="trailing" secondItem="3O3-4m-DRT" secondAttribute="trailing" constant="30" id="IzH-ut-C6M"/>
+                            <constraint firstItem="fQJ-Tv-yVb" firstAttribute="trailing" secondItem="amq-aN-VaP" secondAttribute="trailing" constant="30" id="KIV-rg-A2M"/>
+                            <constraint firstItem="amq-aN-VaP" firstAttribute="leading" secondItem="fQJ-Tv-yVb" secondAttribute="leading" constant="30" id="b4Z-Mv-BaJ"/>
+                            <constraint firstItem="amq-aN-VaP" firstAttribute="top" secondItem="FSN-hb-nhv" secondAttribute="bottom" constant="20" id="ddn-gu-beB"/>
+                            <constraint firstItem="Cqd-xw-9vM" firstAttribute="top" secondItem="amq-aN-VaP" secondAttribute="bottom" constant="20" id="fZW-I2-t5p"/>
+                            <constraint firstItem="fQJ-Tv-yVb" firstAttribute="trailing" secondItem="NLj-1u-2bH" secondAttribute="trailing" constant="30" id="hfF-TE-uij"/>
+                            <constraint firstItem="fQJ-Tv-yVb" firstAttribute="trailing" secondItem="Cqd-xw-9vM" secondAttribute="trailing" constant="30" id="mXc-Px-UUG"/>
+                            <constraint firstItem="3O3-4m-DRT" firstAttribute="top" secondItem="NLj-1u-2bH" secondAttribute="bottom" constant="20" id="nc5-7H-y7R"/>
+                            <constraint firstItem="NLj-1u-2bH" firstAttribute="top" secondItem="P0S-PY-ceL" secondAttribute="bottom" constant="50" id="ocI-xS-XfQ"/>
+                            <constraint firstItem="P0S-PY-ceL" firstAttribute="leading" secondItem="fQJ-Tv-yVb" secondAttribute="leading" constant="20" id="ppY-hy-Prr"/>
+                            <constraint firstItem="NLj-1u-2bH" firstAttribute="leading" secondItem="fQJ-Tv-yVb" secondAttribute="leading" constant="30" id="sJ1-xA-pxV"/>
+                            <constraint firstItem="FSN-hb-nhv" firstAttribute="leading" secondItem="fQJ-Tv-yVb" secondAttribute="leading" constant="30" id="y11-Vj-X7M"/>
+                            <constraint firstItem="3O3-4m-DRT" firstAttribute="leading" secondItem="fQJ-Tv-yVb" secondAttribute="leading" constant="30" id="zfR-ko-1oP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Обмен валюты" id="z0b-sj-3Dj"/>
+                    <navigationItem key="navigationItem" title="Exchange " id="z0b-sj-3Dj"/>
                     <connections>
                         <outlet property="actualDateLabel" destination="P0S-PY-ceL" id="wAi-ug-YKy"/>
                         <outlet property="buttonFrom" destination="NLj-1u-2bH" id="yYc-jc-xxh"/>
@@ -148,7 +139,7 @@
                     </connections>
                 </barButtonItem>
             </objects>
-            <point key="canvasLocation" x="2562.5954198473282" y="-468.3098591549296"/>
+            <point key="canvasLocation" x="2563" y="-468"/>
         </scene>
         <!--Item-->
         <scene sceneID="FbA-ya-VNo">
@@ -216,7 +207,7 @@
             </objects>
             <point key="canvasLocation" x="4358" y="-468"/>
         </scene>
-        <!--Настройки-->
+        <!--Settings-->
         <scene sceneID="b5b-zl-Fgp">
             <objects>
                 <viewController storyboardIdentifier="SettingsVC" id="grd-KH-Kib" customClass="SettingsVC" customModule="CurrencyRate" customModuleProvider="target" sceneMemberID="viewController">
@@ -237,7 +228,7 @@
                             <constraint firstItem="oFk-Qc-gx6" firstAttribute="top" secondItem="7NO-qI-Ra5" secondAttribute="top" id="wzv-gH-gYy"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Настройки" id="Rbe-iH-gxD"/>
+                    <navigationItem key="navigationItem" title="Settings" id="Rbe-iH-gxD"/>
                     <connections>
                         <outlet property="tableViewSettings" destination="oFk-Qc-gx6" id="LWX-D6-UKh"/>
                     </connections>
@@ -246,11 +237,11 @@
             </objects>
             <point key="canvasLocation" x="2563" y="998"/>
         </scene>
-        <!--Обмен-->
+        <!--Exchange-->
         <scene sceneID="B3Y-04-bXp">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XYH-nd-Cgt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Обмен" image="exchangeBlack" id="4L0-za-i6I"/>
+                    <tabBarItem key="tabBarItem" title="Exchange" image="exchangeBlack" id="4L0-za-i6I"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Aw5-ZS-hVG">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -265,11 +256,11 @@
             </objects>
             <point key="canvasLocation" x="1752" y="-467"/>
         </scene>
-        <!--Настройки-->
+        <!--Settings-->
         <scene sceneID="TTI-vb-e6F">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5B7-aX-RE8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Настройки" image="settingsBlack" id="PBm-xq-QFd"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settingsBlack" id="PBm-xq-QFd"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ex6-SQ-a9A">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -284,7 +275,7 @@
             </objects>
             <point key="canvasLocation" x="1752" y="998"/>
         </scene>
-        <!--Курсы сегодня-->
+        <!--Courses on today-->
         <scene sceneID="GSH-DU-xxR">
             <objects>
                 <viewController storyboardIdentifier="CoursesVC" id="Jbh-ch-HRU" customClass="CoursesVC" customModule="CurrencyRate" customModuleProvider="target" sceneMemberID="viewController">
@@ -364,7 +355,7 @@
                             <constraint firstItem="N9c-Pw-hza" firstAttribute="leading" secondItem="VgB-fe-o7n" secondAttribute="leading" id="y3I-gf-yIm"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Курсы сегодня" id="UEi-x2-ofQ">
+                    <navigationItem key="navigationItem" title="Courses on today" id="UEi-x2-ofQ">
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="15O-vr-tXC">
                             <connections>
                                 <action selector="barItemLoad" destination="Jbh-ch-HRU" id="tIe-jm-FLZ"/>
@@ -380,11 +371,11 @@
             </objects>
             <point key="canvasLocation" x="2562.5954198473282" y="-1166.1971830985915"/>
         </scene>
-        <!--Курсы-->
+        <!--Currencies-->
         <scene sceneID="jQx-zO-GWE">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IUc-Yj-IXB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Курсы" image="currencyBlackx3" id="Uhz-pN-as5"/>
+                    <tabBarItem key="tabBarItem" title="Currencies" image="currencyBlackx3" id="Uhz-pN-as5"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vsl-le-xPm">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -399,11 +390,11 @@
             </objects>
             <point key="canvasLocation" x="1752" y="-1166"/>
         </scene>
-        <!--Банки-->
+        <!--Banks-->
         <scene sceneID="p5I-xC-rUU">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pnp-1w-Fvl" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Банки" image="bankBlack" id="z69-ft-SE1">
+                    <tabBarItem key="tabBarItem" title="Banks" image="bankBlack" id="z69-ft-SE1">
                         <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -420,7 +411,7 @@
             </objects>
             <point key="canvasLocation" x="1752" y="293"/>
         </scene>
-        <!--Банки-->
+        <!--Banks-->
         <scene sceneID="f3V-9b-UjL">
             <objects>
                 <viewController storyboardIdentifier="BanksVC" id="lxH-uS-0tr" customClass="BanksVC" customModule="CurrencyRate" customModuleProvider="target" sceneMemberID="viewController">
@@ -454,7 +445,7 @@
                             <constraint firstItem="qVK-GO-taV" firstAttribute="top" secondItem="c6f-2p-yRw" secondAttribute="bottom" id="xlp-Cv-iI0"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Банки" id="I9E-RL-DhN">
+                    <navigationItem key="navigationItem" title="Banks" id="I9E-RL-DhN">
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="oyc-WW-vL0">
                             <connections>
                                 <action selector="barBankItem" destination="lxH-uS-0tr" id="G1h-1x-IDl"/>
@@ -489,7 +480,7 @@
             </objects>
             <point key="canvasLocation" x="3508" y="-468"/>
         </scene>
-        <!--Тема приложения-->
+        <!--Appearance-->
         <scene sceneID="D3g-ib-F5l">
             <objects>
                 <viewController storyboardIdentifier="AppearanceVC" id="1xu-Dn-0JN" customClass="AppearanceVC" customModule="CurrencyRate" customModuleProvider="target" sceneMemberID="viewController">
@@ -511,7 +502,7 @@
                             <constraint firstItem="Y9f-RC-GjP" firstAttribute="bottom" secondItem="Mh5-4R-9XB" secondAttribute="bottom" id="xcf-yW-XSj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Тема приложения" id="QHf-hq-gSC"/>
+                    <navigationItem key="navigationItem" title="Appearance" id="QHf-hq-gSC"/>
                     <connections>
                         <outlet property="themeTableView" destination="Mh5-4R-9XB" id="DSj-op-dOB"/>
                     </connections>
@@ -544,20 +535,11 @@
         <image name="currencyBlackx3" width="25" height="25"/>
         <image name="exchangeBlack" width="25" height="25"/>
         <image name="settingsBlack" width="25" height="25"/>
-        <namedColor name="BackgroundColor">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

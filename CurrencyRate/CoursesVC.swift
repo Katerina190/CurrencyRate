@@ -9,13 +9,13 @@ import UIKit
 
 
 final class CoursesVC: UIViewController {
-    var currencies: [Model]  = []
+    private var currencies: [Model]  = []
     private var networkService = NetworkService()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
+        searchBar.delegate = self
         
         networkService.loadPosts { currencies in
             self.currencies = currencies
@@ -26,12 +26,28 @@ final class CoursesVC: UIViewController {
             
         }
     }
+    
+    
+    @IBOutlet private weak var searchBar: UISearchBar!
         
+    @IBAction private func barItemLoad() {
+        loadCourse()
+        
+    }
     @IBOutlet private weak var tableView: UITableView! {
         didSet {
             tableView.dataSource = self
         }
     }
+
+
+private func loadCourse() {
+    networkService.loadPosts { currencies in
+        self.currencies = currencies
+        self.tableView.reloadData()
+    }
+}
+
 }
 extension CoursesVC: UITableViewDelegate, UITableViewDataSource {
 
@@ -60,5 +76,26 @@ extension CoursesVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     
+}
+
+extension CoursesVC: UISearchBarDelegate {
+    
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty {
+            loadCourse()
+        } else {
+            networkService.loadPosts { currencies in
+                self.currencies = currencies.filter {
+                    $0.Cur_Name.lowercased().contains(searchText.lowercased()) }
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+            searchBar.resignFirstResponder()
+            searchBar.text = ""
+        }
 }
 

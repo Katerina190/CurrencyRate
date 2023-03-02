@@ -36,8 +36,6 @@ final class ExchangeVC: UIViewController {
             self!.updateUI()
             self!.renewButtons()
         }
-        //buttonFrom.setTitle(buttonTitle, for: .normal)
-        labelConvert.text = "Convert in:"
         resultFrom.delegate = self
     }
     
@@ -47,7 +45,7 @@ final class ExchangeVC: UIViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd.MM.yyyy"
         let formattedDate = dateFormatter.string(from: Date())
-        actualDateLabel.text = "Courses for \(formattedDate)"
+        actualDateLabel.text = "\(formattedDate)"
         
     }
     //MARK: - function for convert money
@@ -101,7 +99,7 @@ final class ExchangeVC: UIViewController {
             let fromVC = storyboard.instantiateViewController(withIdentifier: "\(ListForChoiceCurrencies.self)") as! ListForChoiceCurrencies
             fromVC.delegate = self
             fromVC.choosenCurrency = buttonType
-            navigationController?.present(fromVC, animated: true)
+            present(fromVC, animated: true)
         
     }
     
@@ -110,12 +108,12 @@ final class ExchangeVC: UIViewController {
         resultFrom.text = ""
     }
     
-    @IBAction private func buttonFromMoney(_ sendeer: AnyObject) {
+    @IBAction private func buttonFromMoney(_ sender: AnyObject) {
         presentListCurrencyVC(buttonType: .from)
         clearTextFields()
     }
     
-    @IBAction private func buttonToMoney(_ sendeer: AnyObject) {
+    @IBAction private func buttonToMoney(_ sender: AnyObject) {
         presentListCurrencyVC(buttonType: .to)
         clearTextFields()
     }
@@ -123,7 +121,7 @@ final class ExchangeVC: UIViewController {
 }
 
     
-// MARK: - extendions
+// MARK: - extension
 extension ExchangeVC: UITextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         navigationItem.rightBarButtonItem = rightButtonDone
@@ -143,6 +141,7 @@ extension ExchangeVC: UITextFieldDelegate {
     }
 }
 
+//MARK: - extension
 extension ExchangeVC: CurrencySelectionDelegate {
     func didSelect(currency: Model, forType type: SelectedCurrency) {
         if type == .from {
